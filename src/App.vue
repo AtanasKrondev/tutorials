@@ -3,7 +3,7 @@
     <app-header></app-header>
     <main>
       <app-navigation @navigate="navigationHandler($event)" :nav-items="tutorials.technologies"></app-navigation>
-      <app-home :subjects="subjects"></app-home>
+      <!-- <app-home :subjects="subjects"></app-home> -->
       <!-- <app-login></app-login> -->
       <!-- <app-register></app-register> -->
       <!-- <app-create-subject
@@ -11,6 +11,7 @@
         :technologies="tutorials.technologies"
         @create="createHanlder($event)"
       ></app-create-subject> -->
+      <app-register-form></app-register-form>
     </main>
     <app-footer></app-footer>
   </div>
@@ -22,9 +23,10 @@ import tutorials from "./tutorials.json";
 import AppHeader from "./components/core/Header";
 import AppFooter from "./components/core/Footer";
 import AppNavigation from "./components/core/Navigation";
-import AppHome from "./components/Home";
+// import AppHome from "./components/Home";
 // import AppLogin from "./components/Login";
 // import AppRegister from "./components/Register";
+import AppRegisterForm from "./components/RegisterForm";
 // import AppCreateSubject from "./components/CreateSubject";
 
 export default {
@@ -33,10 +35,11 @@ export default {
     AppHeader,
     AppFooter,
     AppNavigation,
-    AppHome,
+    // AppHome,
     // AppLogin,
     // AppRegister,
     // AppCreateSubject
+    AppRegisterForm,
   },
   data() {
     return {
